@@ -1,0 +1,99 @@
+<?php
+
+//                                       --Class--  
+
+/**
+ * Basic class definitions begin with the keyword class,
+ * followed by a class name, followed by a pair of curly braces,
+ * which enclose the definitions of the properties and methods belonging to the class.
+ * The class name can be any valid label, provided it is not a PHP reserved word.
+ * A valid class name starts with a letter or underscore,
+ * followed by any number of letters, numbers, or underscores.
+ * As a regular expression, it would be expressed thus: ^[a-zA-Z_\x80-\xff][a-zA-Z0-9_\x80-\xff]*$.
+ * It is recommended that the class name be the same as the file name 
+ * class name must be StudlyCase 
+ * Class member variables are called properties. variable => properties 
+ * A class may contain its own constants, variables (called "properties"), and functions (called "methods").
+ */
+
+
+//                                  --visibility marker-- 
+
+/**
+ * public    => Class members declared public can be accessed everywhere.
+ * 
+ * protected => Members declared protected can be accessed only within the class itself and
+ * by inheriting and parent classes. 
+ * 
+ * private   => Members declared as private may only be accessed by the class that defines the member.
+ */
+
+ //                                    -- $this --
+
+ /**
+  * Within class methods non-static properties may be accessed by using -> (Object Operator): $this->property
+  * (where property is the name of the property).
+  * The pseudo-variable $this is available inside any class method when that method is called from within an object context.
+    $this is the value of the calling object.
+  */
+
+ //                               --Self And Static Keywords--
+
+/**
+ * Static properties are accessed by using the :: (Double Colon): self::$property.
+ * define static properties and method 
+ * the pseudo-variable $this is not available inside methods declared as static.
+ * Declaring class properties or methods as static makes them accessible without needing an instantiation of the class.
+ * These can also be accessed statically within an instantiated class object.
+ */
+           
+  /*
+  *                                  ------Final Keyword-------
+  *
+  * The final keyword prevents child classes from overriding a method or
+  * constant by prefixing the definition with final.
+  * If the class itself is being defined final then it cannot be extended.
+  */
+
+/**
+ *                                  ------Abstract Class----------
+ *
+ * PHP has abstract classes and methods. 
+ * Classes defined as abstract cannot be instantiated,
+ * and any class that contains at least one abstract method must also be abstract.
+ * Methods defined as abstract simply declare the method's signature; they cannot define the implementation.
+ * abstract methodes contains no body code.
+ * can have abstract methodes and non abstract methodes. 
+ * when you inhenit the abstract class you must use the abstract methodes in the child class.
+ * abstract methodes can be use parameter.
+ * visibility marker must be same the level or down not up level. 
+ * say private can be private & protected & public.
+ * say protected can be protected & public cannot private.
+ * say public can be only public cannot protected & private .
+ */
+     
+ //                          ----polymorphism    =>     interface------
+
+ /**
+  * Interface is a contract or conditions that you must implemented.
+  * Object interfaces allow you to create code which specifies which methods a class must implement, 
+  * without having to define how these methods are implemented.
+  * All functions must be abstract.
+  * All methods declared in an interface must be public; this is the nature of an interface.
+  * Interfaces share a namespace with classes and traits, so they may not use the same name.
+  * Interfaces are defined in the same way as a class, but with the interface keyword replacing the class keyword
+  * and without any of the methods having their contents defined.
+  *                                     
+  *                                   ----implements-----
+  *
+  * To implement an interface, the implements operator is used.
+  * All methods in the interface must be implemented within a class; failure to do so will result in a fatal error.
+  * Classes may implement more than one interface if desired by separating each interface with a comma.
+
+*                                     ------Traits------
+
+  * A Trait is similar to a class, 
+  * but only intended to group functionality in a fine-grained and consistent way.
+  * It is not possible to instantiate a Trait on its own.
+  * It is an addition to traditional inheritance and enables horizontal composition of behavior; that is,
+  * the application of class members without requiring inheritance.
