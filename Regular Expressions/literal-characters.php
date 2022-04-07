@@ -1,0 +1,4 @@
+<?php
+
+
+$pattern = 'hi';
