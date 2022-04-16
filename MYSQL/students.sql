@@ -1,0 +1,10 @@
+CREATE TABLE students(
+    id INT UNSIGNED AUTO_INCREMENT NOT NULL  PRIMARY KEY,
+    name VARCHAR(40) NOT NULL ,
+    courseId INT UNSIGNED NOT NULL
+);
+
+
+USE DB_learn;
+INSERT INTO students(name)
+VALUES("hesham");
