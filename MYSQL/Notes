@@ -1,0 +1,67 @@
+
+ ---------- CHARACTER SET AND COLLATION ---------- 
+
+https://dev.mysql.com/doc/refman/8.0/en/charset-general.html 
+
+https://www.mysqltutorial.org/mysql-character-set/
+
+A character set is a set of symbols and encodings. 
+A collation is a set of rules for comparing characters in a character set. 
+Let's make the distinction clear with an example of an imaginary character set.
+
+Suppose that we have an alphabet with four letters: A, B, a, b. 
+We give each letter a number: A = 0, B = 1, a = 2, b = 3. The letter A is a symbol, 
+the number 0 is the encoding for A, and the combination of all four letters and their encodings is a character set.
+
+
+ ---------- CREATE DATABASE ---------- 
+
+https://dev.mysql.com/doc/refman/8.0/en/create-database.html
+https://www.mysqltutorial.org/mysql-create-database/
+
+CREATE DATABASE [IF NOT EXISTS] database_name
+[CHARACTER SET charset_name]
+[COLLATE collation_name]
+
+
+1 - First, specify name of the database after the the CREATE DATABASE keywords.
+    The database name must be unique within a MySQL server instance.
+    If you attempt to create a database with a name that already exists, MySQL will issue an error.
+
+2 - Second, use the IF NOT EXISTS option to conditionally create a database if it doesn’t exist.
+
+3 - Third, specify the character set and collation for the new database.
+    If you skip the CHARACTER SET and COLLATE clauses, 
+    MySQL will the default character set and collation for the new database.
+
+ ---------- using the mysql client tool ---------- 
+
+* mysql -u root -p
+
+CREATE DATABASE [IF NOT EXISTS] sTORE_DB;
+
+Finally, select the newly created database to work with by using the USE statement:
+
+USE testdb;
+
+ ---------- DROP DATABASE ---------- 
+
+The DROP DATABASE statement drops all tables in the database and deletes the database permanently. 
+Therefore, you need to be very careful when using this statement.
+If you drop a database that does not exist, MySQL will issue an error.
+
+To prevent an error from occurring if you delete a non-existing database, you can use the IF EXISTS option. 
+In this case, MySQL will terminate the statement without issuing any error.
+
+DROP DATABASE [IF EXISTS] database_name;
+
+ ---------- CREATE TABLE ---------- 
+https://www.mysqltutorial.org/mysql-create-table/
+
+ CREATE TABLE [IF NOT EXISTS] table_name(
+   column_1_definition,
+   column_2_definition,
+   table_constraints
+);
+
+column_name data_type(length) [NOT NULL] [DEFAULT value] [AUTO_INCREMENT] column_constraint;

@@ -8,6 +8,9 @@
 // float 
 // boolean 
 // array 
+// null
+//resources
+//opject
 
 // integer (int)  المتغير من هذا النوع هو دائم يكون رقم صحيح 
 
