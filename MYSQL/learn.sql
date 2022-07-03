@@ -64,3 +64,7 @@ SELECT * FROM users  WHERE age BETWEEN 23 AND 26 OR age = 29 ORDER BY age ASC;
 SELECT * FROM users  WHERE name LIKE '%h%';
 SELECT * FROM users  WHERE name LIKE 'h_m';
 
+
+ALTER TABLE classics DROP pages;
+
+DELETE FROM table_name WHERE column_name = value_name 
