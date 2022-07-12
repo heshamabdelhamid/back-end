@@ -1,0 +1,13 @@
+{
+    "name": "dev-hesham/php-mvc-project",
+    "autoload": {
+        "psr-4": {
+            "App\\": "App",
+            "Src\\": "src"
+        },
+        "require": {
+            "vlucas/phpdotenv": "^5.4",
+            "symfony/var-dumper": "^6.0"
+        }
+    }
+}
