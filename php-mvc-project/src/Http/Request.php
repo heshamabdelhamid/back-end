@@ -11,8 +11,7 @@ class Request
 
     public function path()
     {
-        $path = $_SERVER['REQUEST_URI'] ?? '/';
-
-        return str_contains($path, "?") ? explode('?', $path)[0] : $path;
+        $path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH,);
+        return trim($path, '/');
     }
 }

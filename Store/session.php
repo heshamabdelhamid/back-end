@@ -129,7 +129,7 @@ class AppSessionHandler extends SessionHandler
 
 $session = new AppSessionHandler();
 $session->start();
-var_dump($session);
+// var_dump($session);
 // $session->kill();
 if (!$session->isValidFingerPrint()) {
     $session->kill();

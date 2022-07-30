@@ -1,0 +1,17 @@
+{
+  "name": "hesham-web-dev/php-unit-test",
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "heshamabdelhamid",
+      "email": "heshamabdelhamid432@gmail.com"
+    }
+  ],
+  "require": {
+    "phpunit/phpunit": "^9"
+  }
+}

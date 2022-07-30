@@ -2,6 +2,6 @@
 
 use Src\Http\Route;
 
-Route::get('/', function(){
-    return 'hello';
+Route::get('/', function () {
+    return 'hello hesham';
 });
